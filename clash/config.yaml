@@ -42,11 +42,6 @@ proxy-providers:
       interval: 300
 # 代理节点选择
 proxy-groups:
-  - name: 全部节点
-    type: select
-    use:
-      - woccloud
-      - panghu
 
   - name: 代理模式
     type: select
@@ -61,10 +56,10 @@ proxy-groups:
       - 故障转移
       - 订阅节点
 
-  - name: 订阅节点
+  - name: 全部节点
     type: select
-    proxies:
-      - 全部节点
+    use:
+      - woccloud
 
   - name: 广告拦截
     type: select
