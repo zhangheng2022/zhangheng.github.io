@@ -54,7 +54,7 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 订阅节点
+      - 全部节点
 
   - name: 全部节点
     type: select
