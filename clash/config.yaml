@@ -42,7 +42,6 @@ proxy-providers:
       interval: 300
 # 代理节点选择
 proxy-groups:
-
   - name: 代理模式
     type: select
     proxies:
@@ -96,7 +95,6 @@ proxy-groups:
     interval: 180
     proxies:
       - 全部节点
-
 
 rule-providers:
   reject:
