@@ -59,6 +59,7 @@ proxy-groups:
     type: select
     use:
       - woccloud
+      - panghu
 
   - name: 广告拦截
     type: select
