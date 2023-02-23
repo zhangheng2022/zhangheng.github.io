@@ -196,23 +196,23 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 
-  rules:
-    - RULE-SET,applications,DIRECT
-    - DOMAIN,clash.razord.top,DIRECT
-    - DOMAIN,yacd.haishan.me,DIRECT
-    - RULE-SET,private,DIRECT
-    - RULE-SET,reject,广告拦截
-    - RULE-SET,icloud,DIRECT
-    - RULE-SET,apple,DIRECT
-    - RULE-SET,google,DIRECT
-    - RULE-SET,tld-not-cn,代理节点
-    - RULE-SET,gfw,代理节点
-    - RULE-SET,greatfire,代理节点
-    - RULE-SET,telegramcidr,代理节点
-    - RULE-SET,lancidr,DIRECT
-    - RULE-SET,cncidr,DIRECT
-    - GEOIP,LAN,DIRECT
-    - GEOIP,CN,DIRECT
-    - RULE-SET,direct,DIRECT
-    - RULE-SET,proxy,代理模式
-    - MATCH,代理模式
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,广告拦截
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,tld-not-cn,代理节点
+  - RULE-SET,gfw,代理节点
+  - RULE-SET,greatfire,代理节点
+  - RULE-SET,telegramcidr,代理节点
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,proxy,代理模式
+  - MATCH,代理模式
