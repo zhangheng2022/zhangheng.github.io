@@ -151,6 +151,15 @@ proxies:
     password: 111
 
 proxy-providers:
+  EFCloud:
+    type: http
+    path: ./Server/EFCloud.yaml
+    url: "https://v1.efshop.cc/api/v1/client/subscribe?token=c6e8842f39a1fe5e25befc8fd839c932"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
   v2free:
     type: http
     path: ./Server/v2free.yaml
@@ -178,6 +187,7 @@ proxy-groups:
   - name: 全部节点
     type: select
     use:
+      - EFCloud
       - v2free
 
   - name: 广告拦截
