@@ -151,15 +151,6 @@ dns:
 proxies:
 
 proxy-providers:
-  woccloud:
-    type: http
-    path: ./Server/woccloud.yaml
-    url: "https://service-33p4qzr4-1256078775.gz.apigw.tencentcs.com/link/3kH0nW0hyK6Oj5DR?clash=1&extend=1"
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
   panghu:
     type: http
     path: ./Server/panghu.yaml
