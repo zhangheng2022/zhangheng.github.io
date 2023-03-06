@@ -178,7 +178,6 @@ proxy-groups:
   - name: 全部节点
     type: select
     use:
-      - woccloud
       - panghu
 
   - name: 广告拦截
