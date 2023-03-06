@@ -133,16 +133,11 @@ dns:
   # are always used if not match `fallback-filter.ipcidr`.
   #
   # This is a countermeasure against DNS pollution attacks.
-  # fallback-filter:
-  #   geoip: true
-  #   geoip-code: CN
-  #   ipcidr:
-  #     - 240.0.0.0/4
-  #   domain:
-  #     - '+.google.com'
-  #     - '+.facebook.com'
-  #     - '+.youtube.com'
-
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
   # Lookup domains via specific nameservers
   # nameserver-policy:
   #   'www.baidu.com': '114.114.114.114'
@@ -155,6 +150,15 @@ proxy-providers:
     type: http
     path: ./Server/panghu.yaml
     url: "https://suo.yt/wdSXie0"
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+  v2free:
+    type: http
+    path: ./Server/panghu.yaml
+    url: "https://to.runba.cyou/link/RFu6OMNoO4Z4njd6?clash=1"
     interval: 3600
     health-check:
       enable: true
@@ -179,6 +183,7 @@ proxy-groups:
     type: select
     use:
       - panghu
+      - v2free
 
   - name: 广告拦截
     type: select
@@ -330,7 +335,7 @@ rules:
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
   - RULE-SET,direct,DIRECT
   - RULE-SET,proxy,代理模式
   - MATCH,代理模式
