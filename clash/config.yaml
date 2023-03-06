@@ -147,7 +147,7 @@ proxy-providers:
   EFCloud:
     type: http
     path: ./Server/EFCloud.yaml
-    url: "https://v1.efshop.cc/api/v1/client/subscribe?token=c6e8842f39a1fe5e25befc8fd839c932"
+    url: "https://suo.yt/eUjrnBX"
     interval: 3600
     health-check:
       enable: true
