@@ -143,13 +143,6 @@ dns:
   #   'www.baidu.com': '114.114.114.114'
   #   '+.internal.crop.com': '10.0.0.1'
 
-proxies:
-  - name: "trojan"
-    type: trojan
-    server: vpn.zhangheng.eu.org
-    port: 443
-    password: 111
-
 proxy-providers:
   EFCloud:
     type: http
