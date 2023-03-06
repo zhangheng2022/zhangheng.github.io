@@ -146,18 +146,9 @@ dns:
 proxies:
 
 proxy-providers:
-  panghu:
-    type: http
-    path: ./Server/panghu.yaml
-    url: "https://suo.yt/wdSXie0"
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
   v2free:
     type: http
-    path: ./Server/panghu.yaml
+    path: ./Server/v2free.yaml
     url: "https://to.runba.cyou/link/RFu6OMNoO4Z4njd6?clash=1"
     interval: 3600
     health-check:
@@ -182,7 +173,6 @@ proxy-groups:
   - name: 全部节点
     type: select
     use:
-      - panghu
       - v2free
 
   - name: 广告拦截
