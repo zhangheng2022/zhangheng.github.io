@@ -144,6 +144,11 @@ dns:
   #   '+.internal.crop.com': '10.0.0.1'
 
 proxies:
+  - name: "trojan"
+    type: trojan
+    server: vpn.zhangheng.eu.org
+    port: 443
+    password: 111
 
 proxy-providers:
   v2free:
